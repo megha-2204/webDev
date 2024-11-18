@@ -12,7 +12,7 @@ li,h1,ul{
     display: inline;
 }
 ul{
-    margin-left: 75k%;
+    margin-left: 75%;
 }
 li{
     color: grey;
@@ -20,4 +20,13 @@ li{
 }
 li:hover{
     color:white;
+}
+input{
+    width: 60%;
+    padding: 15px;
+
+}
+.searchbar{
+    padding: 50px;
+    text-align: center;
 }
