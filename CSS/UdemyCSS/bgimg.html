@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Border box concepts</title>
+        <style>
+            .yellow{
+                color: yellow;
+                background-color: black;
+                height: auto;
+                width:auto;
+                padding: 10px;
+                border: 5px ridge;
+            }
+
+            .blue{
+                color: blue;
+                background-image: url(/Users/megha-17593/Desktop/vsc/html/webDev/CSS/UdemyCSS/img/p3.jpg);
+                background-size: 100px 100px;
+                background-repeat: no-repeat;
+                background-origin: border-box;
+                background-position: center;
+                height: 100px;
+                width: auto;
+                padding: 10px 20px 30px 40px;
+                border-width: 10px 20px 5px 13px;
+                border-color: aquamarine;
+                border-style: ridge;
+            }
+
+            .green{
+                color: greenyellow;
+                background-image: url(/Users/megha-17593/Desktop/vsc/html/webDev/CSS/UdemyCSS/img/p1.jpeg);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-origin: border-box;
+                height: auto;
+                width: auto;
+                padding: 40px 20px;
+                border-width: 10px 20px;
+                border-style: groove;
+                border-color: blue;
+                border-radius: 10px;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="yellow">
+            <p> Facebook. </p>
+        </div>  
+        <div class="green">
+            <p> Microsoft. </p>
+        </div>
+        <div class="blue">
+            <p> Apple. </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+*Padding concepts*
+What is padding?
+-> defines the space between the content of an element and its border.
+-> if an element has a height and width defined, adding padding will increase those dimensions since padding is added to the content area.
+
+Margin
+-> it creates space between divs
+-> Margin is the space outside an element's border. It separates the element from other surrounding elements.
+
+Outline:
+-> An outline is a line drawn around the element's border, like a border
+
+Border:
+A border is the line that surrounds an element, this will be present at last after outline
+
+
+
+*BACKGROUND IMAGE*
+background-image: url(/Users/megha-17593/Desktop/vsc/html/webDev/CSS/UdemyCSS/img/p3.jpg);
+background-size: 100px 100px;
+background-repeat: no-repeat;
+background-origin: border-box;
+background-position: center;
+
+*MARGIN*
+margin: 10px 5px
+
+*OUTLINE*
+outline-style: solid;
+outline-color: blueviolet;
+outline-width: thick;
+
+*BORDER*
+border-width: 10px 20px;
+border-style: groove;
+border-color: blue;
+border-radius: 10px;
+
+*PADDING*
+padding: 100px 100px;
+
+*FLOATING*
+Usually div elements float horizontally, we can make changes by float: left;
+clear: both; -> refer chatgpt for this case when needed
+
+
+
+*POSITIONING*
+position 
