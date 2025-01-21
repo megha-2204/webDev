@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Styling lists in html</title>
+        <style>
+            ul.list1{
+                list-style: square; 
+                /* list-style:lower-roman; */
+                /* list-style:upper-roman; */
+                /* list-style-image: url(img/Purple-Square-GIF-1780386889.gif); */
+            }
+
+            ul.list2{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            ul.list2 li{
+                background-image: url(img/img1.gif);
+            }
+        </style>
+    </head>
+    <body>
+        <p>List of European capitals</p>
+        <ul class="list1">
+            <li>Paris</li>
+            <li>London</li>
+            <li>Madrid</li>
+        </ul>
+        <p>List of European capitals</p>
+        <ul class="list2">
+            <li>Paris</li>
+            <li>London</li>
+            <li>Madrid</li>
+        </ul>
+    </body>
+</html>

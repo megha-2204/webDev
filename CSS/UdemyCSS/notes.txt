@@ -47,3 +47,147 @@ clear: both; -> refer chatgpt for this case when needed
 
 *POSITIONING*
 position 
+
+
+
+*TEXT DECORATION*
+ *text decoration properties*
+
+ text decoration: underline
+ font-weight:bold
+ 
+(1em: 16px;)
+
+letter-spacing: 1px;
+
+text-shadow: 3px 3px 3px grey;
+ horizontal vertical radius color
+ text-indent: 10px;
+
+
+ *TEXT ALIGN*
+
+ text-align: center; 
+ text-align: justify;
+ text-align: left; 
+ text-align: right; 
+
+ *TEXT FONT*
+ font-size: 100px;
+font-family: serif / san-serif / monospace;
+
+
+*TEXT EFFECTS*
+ overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+
+
+When the texts are given without <p> tag, the texts seem to overflow apo, overflow: hidden is used to hide the texts
+white-space: nowrap -> it doesn't take the text when the div ends, it continues there itself
+text-overflow: ellipsis -> this is given when the extra texts are overflowing. but the user need not see apo (...) will be shown
+
+.blue:hover{
+    overflow: visible;
+}
+
+When this is given, hover panrapo the texts that are overflown will be visible
+note: apo no-wrap should not be given
+
+word-break: break-all;
+-> the texts are aligned all together in the div
+
+word-wrap: break-word;
+
+-> the longest word which overflows, will be broken
+
+
+*Understand image sprites - not clear here*
+
+*image Opactiy*
+creates transparency in images
+
+opacity: 0.4;
+
+
+
+*Styling lists*
+
+style unordered list
+list-style: square; 
+list-style:lower-roman; 
+list-style:upper-roman; 
+
+background-image: url(img/img1.gif);
+background-repeat: no-repeat;
+background-position: 0px center;
+padding-left: 30px; 
+
+
+*Styling links*
+
+ a:link{
+    color:green;
+}
+a:hover{
+    font-size: 2em;
+
+}
+div.blue a:active{
+    font-size:4em;
+}
+when hovered and clicked - the font size changes
+
+div.yellow a:visited{
+    color: orange;
+}
+when link is visited the color changes to orange
+
+
+*gradient*
+/* background: linear-gradient(blue,white,orange); */
+/* background: linear-gradient(to bottom left, blue,white,orange); */
+/* background: linear-gradient(90deg, blue,white,orange);  */
+background: radial-gradient(circle,blue 5%,white 15%,rgb(221, 49, 213) 80%);
+
+
+*2D Transforms*
+
+transform: rotate(30deg);
+transform: translate(20px,30px);
+transform: scale(0.5);
+transform: skewX(10deg);
+transform: skewY(10deg);
+transform: skew(10deg,10deg);
+
+*3D Transforms*
+transform: rotateY(70deg);
+transform: rotateX(70deg);
+
+
+*TRANSITIONS*
+transition: width 1s;
+means transition happening in width within 1second
+
+.blue:hover{
+    width: 300px;
+}
+That is when hovered, width changes to 300px
+
+*ANIMATIONS*
+
+animation: myanimation 3s ;
+myanimation is the name of your animation
+3s is the duration
+
+@keyframes myanimation {
+    from{background: green}
+    to{background: purple;}
+}
+@keyframes myanimation {
+    0% {background: red;left:0px;top:0px}
+    25% {background: yellow;left: 200px;top:0px}
+    50% {background: blue;left:200px;top:0px}
+    75%{background: green;left: 0px;top:200px}
+    100% {background: red;left: 0px;top:0px}
+}

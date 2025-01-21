@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title> Styling links in html</title>
+        <style>
+
+            a:link{
+                color:green;
+            }
+            a:hover{
+                font-size: 2em;
+            }
+            .blue{
+                color:white;
+                background-color: rgb(116, 116, 198);
+                padding: 20px;
+                margin: 10 auto;
+                border-width: 5px;
+                border-style: solid;
+                border-color: black;
+            }
+            div.blue a:active{
+                font-size:4em;
+            }
+            .yellow{
+                color: black;
+                background-color: yellow;
+                padding: 20px;
+                margin: 10 auto;
+                border-width: 5px;
+                border-style: solid;
+            }
+            div.yellow a:visited{
+                color: orange;
+            }
+            .pink{
+                color: black;
+                background-color: pink;
+                padding: 20px;
+                margin: 10 auto;
+                border-width: 5px;
+                border-style: solid;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="blue">
+            <p>Facebook is great</p>
+            <p><a href="http://www.amazon.com">Visit link</a></p>
+        </div>
+        <div class="yellow">
+            <p>Microsoft</p>
+            <p><a href="http://www.ebay.com">Visit link</a></p>
+        </div>
+        <div class="pink">
+            <p>Instagram</p>
+            <p><a href="http://www.cnn.com">Visit link</a></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> Transitions in html</title>
+        <style>
+            .blue{
+                color:white;
+                background-color: blue;
+                height: 100px;
+                width: 100px;
+                transition: width 1s;
+            }
+            .blue:hover{
+                width: 300px;
+            }
+            .yellow{
+                color: black;
+                background-color: yellow;
+                height: 100px;
+                width: auto;
+                transition: width 1s,height 1s,transform 1s;
+            }
+            .yellow:hover{
+                width:300px;
+                height:300px;
+                transform: rotateX(180deg);
+            }
+            .pink{
+                color: black;
+                background-color: pink;
+                height: 100px;
+                width: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="blue">
+            <p>Facebook</p>
+        </div>
+        <div class="yellow">
+            <p>Microsoft</p>
+        </div>
+        <div class="pink">
+            <p>Instagram</p>
+        </div>
+    </body>
+</html>

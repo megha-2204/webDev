@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title> Positioning in html</title>
+    </head>
+    <style>
+        .fb{
+            color:white;
+            background-color: rgba(49, 10, 245, 0.869);
+            margin: 10px;
+            border: 5px;
+            border-color: rgb(205, 181, 153); border-style: solid;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;right:0;
+            z-index:1;
+            
+        }
+        .insta{
+            color: white;
+            background-color: rgb(96, 0, 106);
+            margin: 10px;
+            border: 5px;
+            border-color: black;border-style: ridge;
+            padding: 10px;
+            height: 100px;
+            width: auto;
+            position: relative;
+            top: 20px; left: 25px;
+        }
+        .wp{
+
+            background-color: rgb(48, 179, 16);
+            color: white;
+            margin: 10px;
+            border: 5px;
+            border-color: rgb(205, 181, 153); border-style: solid;
+            padding: 10px;
+            position: absolute;
+            height: 100px; width: auto;
+        }
+    </style>
+</html>
+
+<body>
+    <div class="fb"><p>Facebook</p></div>
+    <div class="insta"><p>Instagram</p></div>
+    <div class="wp"><p>Whatsapp</p></div>
+</body>
+
+
+<!-- Position:fixed -> other div ignore this div 
+ relative: it is static excpet we give, top measurements(adhu base pani change agum)
+ fixed: (right:0; bottom:0 => doesn't move even when page scrolled)
+ absolute: 
+ -->
