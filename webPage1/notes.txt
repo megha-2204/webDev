@@ -1,0 +1,49 @@
+*Explained how a web page is created. The ideology behind it*
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = yes">
+
+<meta name="viewport"> tag is used in HTML documents to control how a webpage is displayed and 
+            scaled on different devices, especially mobile devices.
+
+content: Specifies the settings for the viewport. 
+        The values within this attribute dictate how the page behaves on various screens.
+
+initial-scale=1.0:
+Sets the initial zoom level to 1.0
+
+user-scalable=yes:
+Allows users to manually zoom in or out on the webpage.
+
+
+To make the list items inline: float: left;
+
+#menu ul li :last-child{
+    border-right: none;
+}
+
+-> after last element - border-right property will be used
+
+
+transition: font-size 0.25s ease;
+-> transition takes place with respect to font size for 0.25seconds 
+-> ease: start time: fast end time: bit slow
+-> linear: both start time and end time are at equal pace
+
+text-align: justify;
+
+list-style-image: url(arrow.png);
+
+For logos or images-> logomakr.com
+
+    padding: 6px 0px 6px 10px;
+ top right bottom left
+
+     padding: 10px 20px;
+top-bottom, left-right;
+
+For browser compatability that has linear-gradient property,
+    background: linear-gradient(#DCEFA8, #BAE95D);
+    background: -webkit-linear-gradient(#DCEFA8, #BAE95D); (safari)
+    background: -o-linear-gradient(#DCEFA8, #BAE95D); (opera)
+    background: -moz-linear-gradient(#DCEFA8, #BAE95D); (mozila)
+
