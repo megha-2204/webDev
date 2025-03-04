@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+.container{
+    background-color: #07575B;
+    display: grid;
+    /* row height */
+    grid-template-rows: 30px 30px 30px 30px;
+    /* column width */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px; 
+    /* set the height of extra rows outside the template (implicit grid) */
+    grid-auto-rows: 70px;
+
+    /* by default, grid-auto-flow is row, means the extra divs will overflow in terms of rows. when column given column is overflown. */
+    /* to make the overflown divs column  width, we can mention it using grid-auto-column*/
+    
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+} 
+
+/* style divs inside the container */
+.container > div{
+    background-color: #66a5AD;
+    color: aliceblue;
+    text-align: center; 
+    font-size: 20px;
+    padding: 10px;
+    /* margin: 2px; */
+
+}

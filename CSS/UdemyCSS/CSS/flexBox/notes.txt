@@ -1,0 +1,109 @@
+Note: The flexbox property will work based on the height mentioned    
+
+    *display: flex;*
+-> create flexible box layout
+-> : When you apply display: flex; to a parent element, it becomes a flex container
+
+    *flex-direction: column;*
+->The default direction is row, meaning flex items will be arranged in a row from left to right. You can change this direction using the flex-direction property.
+-> div arrangements will be changed according the value given
+
+    *Alignment:* 
+->Flexbox allows easy alignment of items both horizontally and vertically through properties like justify-content and align-items. 
+
+    *Responsive Design:*
+-> It makes it easier to create responsive layouts, as items can grow or shrink to fit the available space using the flex-grow, flex-shrink, and flex-basis properties.
+
+    .container > div
+-> refers to all the div in the container
+
+    *align-content*
+-> It is essential for distributing space between rows or columns when you have multiple flex lines.
+
+
+*CONCEPTS:*
+
+    box-sizing: border-box;
+-> size of the div is going to have padding and border
+-> With border-box, the total width and height of an element includes the padding and border. This means that if you set a width of 200 pixels, this width includes any padding and border, making layout
+-> By default, box-sizing will be content-box;
+
+flex-wrap: wrap;
+ -> When the div has no space, it goes to the next line 
+
+flex-wrap: wrap-reverse;
+ -> When the div has no space, it goes to the next line. except it starts from the last 
+
+        flex-direction: column;
+        flex-direction: row-reverse;
+        flex-direction: row;
+        flex-direction: column-reverse;
+
+-> The arrangements of div is mentioned using flex-direction
+
+    justify-content: center;
+-> the content will be center overall
+
+justify-content: flex-start;
+-> when pushed, the div's start from left
+
+ justify-content: flex-end;
+-> when pushed, the div's start from right
+
+  justify-content: space-around;
+-> it has spaces around flex items (the divs)
+
+  justify-content: space-between;
+-> it has spaces between flex items (meaning there will be no space at start and end of the div)
+-> Justify acts based on flex-direction
+
+    align-items: center;
+-> Centers items in the container.
+    align-items: flex-start;
+-> Aligns items to the start of the container.
+    align-items: flex-end;
+-> Aligns items to the end of the container.
+    align-items: strech; (strech vertically)
+->Stretches items to fill the container (this is the default setting).
+    align-items: baseline; (strches based on the height and width)
+-> Aligns items along their baseline.
+
+
+
+*ALIGNING ROWS/ COLUMNS IN A Flexbox*
+
+aligning a row - align vertically
+(align-content : align-row + align-column)
+
+align-content: stretch -> by default 
+align-content: flex-start => pushed to the start of the row (baseed on the flex-direction)
+align-content: flex-end => pushed to the end 
+align-content: center => center
+align-content: spaces between when minimised to the end / added the macimum divs
+align-content: space-around -> creates space between the divs (width will be present)
+
+*RESIZING FLEX ITEMS*
+
+These commands basically used when minimised or maximised the tab.
+
+flex-grow -> flex items grow at the specified rate 
+
+
+flex-basis: 200px;
+that is, all the divs occupy the width of 200px
+
+flex-shrink
+
+
+*AI Answers:*
+
+flex-basis: 200px; 
+-> means that the item will initially occupy 200 pixels of the flex container.
+
+flex-grow: 1; 
+-> it will grow to occupy any extra space along with other items that also have a growth factor. 
+
+flex-shrink: 1;
+-> it indicates that the item can shrink, allowing the container to fit within its boundaries
+
+

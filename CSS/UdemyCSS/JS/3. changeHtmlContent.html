@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change HTML Content</title>
+        <style>
+            .yellow{
+                color: yellow;
+                background-color: orange;
+                height: 120px;
+                /* width:fit-content; */
+            }
+
+            .blue{
+                color: blue;
+                background-color: red;
+                height: 110px;
+                /* width: 100px; */
+            }
+
+            .green{
+                color: green;
+                background-color: rgb(255, 155, 127);
+                height: 110px;
+                /* width: 80px; */
+
+            }
+
+            .great{
+                color: palevioletred;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="yellow" id="facebook">
+            <p> Facebook is <span class="great">great</span>. </p>    
+        </div>
+        <div class="green">
+            <p> Microsoft. </p>
+        </div>
+        <div class="blue" id="apple">
+            <p> Apple. </p>
+        </div>
+        <button id="button1">Change Facebook content.</button>
+        <button id="button2">Change apple content.</button>
+        <script>
+            document.getElementById("button1").onclick = function(){
+                document.getElementById("facebook").innerHTML = "<p>Megha</p>";
+            }
+            document.getElementById("button2").ondblclick = function(){
+                document.getElementById("apple").innerHTML = "<ul><li>Audi</li><li>BMW</li><li>Benz</li></ul>";
+            }
+        </script>
+    </body>
+</html>

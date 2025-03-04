@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change HTML using variables</title>
+        <style>
+            .yellow{
+                color: yellow;
+                background-color: orange;
+                height: 120px;
+                /* width:fit-content; */
+            }
+
+            .blue{
+                color: blue;
+                background-color: red;
+                height: 110px;
+                /* width: 100px; */
+            }
+
+            .green{
+                color: green;
+                background-color: rgb(255, 155, 127);
+                height: 110px;
+                /* width: 80px; */
+
+            }
+
+            .great{
+                color: palevioletred;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="yellow" id="facebook">
+            <p> Facebook is <span class="great">great</span>. </p>    
+        </div>
+        <div class="green">
+            <p> Microsoft. </p>
+        </div>
+        <div class="blue" id="apple">
+            <p> Apple. </p>
+        </div>
+        <button id="button1">Change Facebook style.</button>
+        <button id="button2">Change apple style.</button>
+        <script>
+            var color= 'green';
+            document.getElementById("button1").onclick = function(){
+            document.getElementById("facebook").style.backgroundColor=color;
+            }
+            var x,y,z,appleColor;
+            // x=Math.random();
+            // x=Math.random() * 256;
+            x=Math.round(Math.random() * 256);
+            window.alert(x);
+
+
+            document.getElementById("button2").onclick = function(){
+                x=Math.round(Math.random() * 256);
+                y=Math.round(Math.random() * 256);
+                z=Math.round(Math.random() * 256);
+                appleColor = 'rgb('+ x +',' +y + ',' +z +')';
+                document.getElementById("apple").style.backgroundColor = appleColor;
+                document.getElementById("apple").innerHTML = '<p>'+appleColor+'</p>';
+
+            }
+        </script>
+    </body>
+</html>
