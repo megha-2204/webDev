@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change HTML content in javascript</title>
+        <meta charset="utf-8">
+        <style>
+            .bluebox{
+                background-color: #0765FF;
+                height: 100px;
+                width: fit-content;
+                text-transform: uppercase;
+            }
+            .yellowbox{
+                background-color: #FFBA14;
+                height: 100px;
+                width: fit-content;
+                text-transform: uppercase;
+            }
+            .datebox{
+                background-color: #FFF400;
+                height: 100px;
+                width: fit-content;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bluebox" id="facebook">
+            <p> Facebook is great. </p>
+        </div>
+        <div class="yellowbox" id="microsoft">
+            <p> Microsoft </p>
+        </div>
+        <div class="datebox" id="apple">
+            <p> Bumble </p>
+        </div>
+        <button id="button1">
+            Change Facebook Content.
+        </button>
+        <button id="button2">
+            Change Microsoft Content.
+        </button>
+        
+        <script>
+            document.getElementById("button1").onclick = function(){
+                document.getElementById("facebook").innerHTML = "<p> Hey Hi, Hope this message brings you flower! I love you </p>";
+            }
+        </script>
+        <script>
+            document.getElementById("button2").ondblclick = function(){
+                document.getElementById("microsoft").innerHTML = "<ul><li>Audi></li><li>BMW</li><li>Benz</li></ul>";
+            }
+        </script>
+
+        <script>
+            var color = 'rgb(18,149,68)';
+            document.getElementById("button1").onclick = function(){ 
+                document.getElementById("facebook").style.backgroundColor = color;
+            }
+            var x,y,z,appleColor;
+            // x= Math.random()*256;
+            x= Math.round(Math.random()*256);
+            y= Math.round(Math.random()*256);
+            z= Math.round(Math.random()*256);
+            //window.alert(x);
+            appleColor = 'rgb('+ x + ',' + y + ',' +z +')';
+            document.getElementById("apple").style.backgroundColor  = appleColor;
+            document.getElementById("apple").innerHTML = appleColor;
+        </script>
+    </body>
+</html>

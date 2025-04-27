@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variables and datatypes  in javascript</title>
+        <meta charset="utf-8">
+        <style>
+            .bluebox{
+                background-color: #0765FF;
+                height: 100px;
+                width: fit-content;
+                text-transform: uppercase;
+            }
+            .yellowbox{
+                background-color: #FFBA14;
+                height: 100px;
+                width: fit-content;
+                text-transform: uppercase;
+            }
+            .datebox{
+                background-color: #FFF400;
+                height: 100px;
+                width: fit-content;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bluebox" id="facebook">
+            <p> Facebook is great. </p>
+        </div>
+        <div class="yellowbox" id="microsoft">
+            <p> Microsoft </p>
+        </div>
+        <div class="datebox">
+            <p> Bumble </p>
+        </div>
+        <button id="button1">
+            Change Facebook Content.
+        </button>
+        <button id="button2">
+            Change Microsoft Content.
+        </button>
+        <script>
+            document.getElementById("button1").onclick = function(){
+                document.getElementById("facebook").innerHTML = "<p> Hey Hi, Hope this message brings you flower! I love you </p>";
+            }
+        </script>
+        <script>
+            document.getElementById("button2").ondblclick = function(){
+                document.getElementById("microsoft").innerHTML = "<ul><li>Audi></li><li>BMW</li><li>Benz</li></ul>";
+            }
+        </script>
+
+
+
+        <!-- Variables and datatypes -->
+         <script>
+            var x=3;
+            window.console.log(x);
+            var y;
+            y=5;
+            var z;
+            window.console.log("the value of z is " + z);
+            z = x+ y;
+            window.console.log("The type of z is " + typeof(z));
+            window.console.log("the value of z is " + z);
+            z = x + " " + y;
+            window.console.log("the value of z is " + z);
+
+            var greeting = "Hello";
+            var firstname = "John";
+            var message = greeting + " " + firstname;
+            window.console.log("the value of message is: " + typeof(message));
+            
+            var check = (x==3);
+            window.console.log("the value of check is "+check);
+            window.console.log("The type of check is " + typeof(check));
+
+
+            var myArray = [1,2,3];
+            window.console.log(myArray);
+            window.console.log(typeof(myArray));
+         </script>
+    </body>
+</html>

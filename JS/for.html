@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>For loops in html</title>
+    </head>
+    <body>
+        <p id="js">Javascript.</p>
+        <script>
+            for(i=0;i<5;i++){
+                document.getElementById("js").innerHTML += "<br />" + i; 
+            }
+            for(i=7;i>-0;i--){
+                document.getElementById("js").innerHTML += "<br />" + Math.pow(i,2);
+            }
+            var shoppingList = ["bread","milk","egg"];
+            for(i=0;i<shoppingList.length;i++){
+                document.getElementById("js").innerHTML += "<br />" + shoppingList[i];
+            }
+            var numList = [1,2,3];
+            for(i=0;i<numList.length;i++){
+                numList[i] += 10;
+            }
+            document.getElementById("js").innerHTML += "<br />" + numList;
+        </script>
+    </body>
+</html>

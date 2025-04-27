@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>objects in javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p>Javascript.</p>
+        <script type="text/javascript">
+            var myPhone = {
+                make : "Apple", 
+                model : "Iphone 4",
+                warranty : 12,
+                color: "White"
+            };
+            window.console.log(myPhone);
+            delete myPhone.warranty;
+            window.console.log(myPhone);
+            window.console.log(myPhone.model);
+
+            //this makes myotherphone properites same as myphone. Any changes made in any of them going to refelct in both the objects
+            var myOtherPhone = myPhone;
+            
+            window.console.log(myOtherPhone);
+            myOtherPhone.model = "Iphone 5";
+            window.console.log(myOtherPhone);
+            window.console.log(myPhone);
+        </script>
+    </body>
+</html>

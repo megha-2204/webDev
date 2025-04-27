@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>object constructors in javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p>Javascript.</p>
+        <script type="text/javascript">
+            function phone(make, model,warranty,color){
+                this.make=make;
+                this.model=model;
+                this.warranty=warranty;
+                this.color=color;
+                this.extendWarranty = function(x){
+                    this.warranty = this.warranty + x;
+                }
+
+            }
+            var myPhone = new phone("Apple","Iphone 5",12,"black");
+            window.console.log(myPhone);
+
+            myPhone.extendWarranty(12);
+            window.console.log(myPhone.warranty);
+
+            myPhone.condition = "like new";
+            window.console.log(myPhone.condition);
+
+            var myBrother = new phone("apple","iphone",6,"white");
+            window.console.log(myBrother);
+            
+            window.console.log(myBrother.condition);
+            //this sets default value
+            phone.prototype.condition = "new";
+            window.console.log(myBrother.condition);
+        </script>
+    </body>
+</html>

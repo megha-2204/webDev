@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regular expressions in html</title>
+    </head>
+    <body>
+        <p> String: <span id="string"></span></p>
+        <p> Pattern: <span id="pattern"></span></p>
+        <p> Result(search): <span id="search"></span></p>
+        <p> Result(match): <span id="match"></span></p>
+        <p> Result(test): <span id="test"></span></p>
+
+
+        <script>
+            var str="Atlanta";
+            var pattern = /a/g;
+            document.getElementById("pattern").innerHTML = pattern;
+            document.getElementById("string").innerHTML = str;
+            document.getElementById("search").innerHTML = str.search(pattern);
+            document.getElementById("match").innerHTML = str.match(pattern);
+            document.getElementById("test").innerHTML = pattern.test(str);
+
+            // window.alert(pattern.test(str));
+            // window.alert(str.match(pattern));
+            // window.alert(str.search(pattern));
+        </script>
+    </body>
+</html>

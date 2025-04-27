@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>window and screen</title>
+        <style>
+            #div1{
+                background-color: cadetblue;
+            }
+            #div2{
+                background-color: rgb(38, 120, 23);
+            }
+            #div3{
+                background-color: rgb(40, 8, 85);
+            }
+            #div4{
+                background-color: rgb(168, 10, 86);
+            }
+            .equals{
+                float: left;
+                margin-left: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1" class="equals">
+            Div1
+        </div>
+        <div id="div2" class="equals">
+            Div2
+        </div>
+        <div id="div3" class="equals">
+            Div3
+        </div>
+        <div id="div4" class="equals">
+            Div4
+        </div>
+        <script>
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            //window.alert(windowHeight);
+            var screenWidth = window.screen.width;
+            //window.alert(screenWidth);
+            var availableScreenHeight = window.screen.availHeight;
+            //window.alert(availableScreenHeight);
+
+            for(i=1;i<5;i++){
+            document.getElementById("div" +i).style.width = window.innerWidth/4-10 + 'px';
+            document.getElementById("div" +i).style.height = window.innerHeight-10 + 'px';
+            }
+        </script>
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+@use "base/base";
+@use "components/navigation";
+@use "utils/variables";
+
+.button-wide{
+    // width: 50%;
+    width: 300/800 * 100%;
+}
+%button-common{
+    color: wheat;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: point + er;
+    // @extend .button-wide;
+}
+
+//create a mixin
+@mixin h_transform($angle){
+    transform: rotate($angle);
+} 
+article{
+    div{
+        h3{
+            // $color3: red !global;
+
+            //color: $color2;
+            color: green;
+            font-size: 28px;
+        }
+        p{
+            // color: $color3;
+            color:aqua;
+            font-size: 20px;
+        }
+    }
+    div:nth-child(1){
+        h3:nth-child(1){
+            //transform: rotate(-3deg);
+            @include h_transform(-3deg); 
+        }
+    }
+    div:nth-child(2){
+        h3:nth-child(1){
+            // transform: rotate(-5deg);
+            @include h_transform(-5deg); 
+        }
+    }
+}
+
+.btn-success{
+    @extend %button-common;
+    // @extend .button_wide;
+    background-color: lawngreen;
+
+}
+.btn-warning{
+    @extend %button-common;
+    background-color: orange ;
+
+}
+.btn-error{
+    @extend %button-common;
+    background-color: orangered ;
+
+}
+

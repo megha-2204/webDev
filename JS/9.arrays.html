@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays in javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="myPara">Javascript.</p>
+        <script type="text/javascript">
+            //var shoppingList = ["bread "," eggs "," milk"];
+            var shoppingList = new Array("bread","eggs","milk");
+            showResult(shoppingList);
+            //document.getElementById("myPara").innerHTML += "<br />" +  shoppingList;
+            showResult(shoppingList[0]);
+            //document.getElementById("myPara").innerHTML += "<br />" +  shoppingList[0];
+            showResult(shoppingList[1]);
+            //document.getElementById("myPara").innerHTML += "<br />" +  shoppingList[2];
+            function showResult(x){
+                document.getElementById("myPara").innerHTML += "<br />" + x;
+            }
+            shoppingList[1]="yogurt";
+            showResult(shoppingList);
+            shoppingList[2]="orange";
+            showResult(shoppingList);
+            //this will delete, but not completely. in output we will have bread,,orange
+            // delete shoppingList[1];
+            // showResult(shoppingList);
+
+            //this will delete that completely. in output we will have bread,orange
+            shoppingList.splice(1,1);
+            showResult(shoppingList);
+
+            shoppingList.splice(1,0,"banana","apple");
+            showResult(shoppingList);
+        
+            shoppingList.sort();
+            showResult(shoppingList);
+            shoppingList.reverse();
+            showResult(shoppingList);
+
+            var myString='how are you?';
+            var myArray = myString.split(' ');
+            showResult(myArray);
+        </script>
+    </body>
+</html>

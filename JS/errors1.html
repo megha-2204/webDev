@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Errors in html</title>
+        <style>
+            #error{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Your password should contain atleast six characters, 1 number, 1 capital letter.</p>
+        <p>Enter password: <br><input id="password" type="password"></p>
+        <p>Re-Enter password: <br><input id="password2" type="password"></p>
+        <button onclick="check()">Submit</button>
+        <p id="error"></p>
+        <script>
+            // try{
+            //     sum(3,4);
+            // }catch(err){
+            //     document.getElementById("error").innerHTML = err.message;
+            // }
+            function check(){
+                var password = document.getElementById("password").value;
+                var password2 = document.getElementById("password2").value;
+                var errorMessage = document.getElementById("error");
+                var errorThrow = "";
+                try{
+                    if(password.length<6){
+                        errorThrow += "<br> Password too short";
+                        //throw errorThrow;
+                    }
+                    if(/[A-Z]/g.test(password )==false){
+                        errorThrow += "<br> Password should include atleast one capital letter";
+                        //throw errorThrow;
+                    }
+                    if(/\d/g.test(password )==false){
+                        errorThrow += "<br> Password should include atleast one digit";
+                        //throw errorThrow;
+                    }
+                    if(password!=password2){
+                        errorThrow += "<br> Password should match";
+                        //throw errorThrow;
+                    }
+                    throw errorThrow;
+                }
+                catch(err){
+                    errorMessage.innerHTML = err;
+                }
+
+            }
+            
+        </script>
+    </body>
+</html>
