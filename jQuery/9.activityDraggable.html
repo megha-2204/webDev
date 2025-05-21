@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+      #droppable{
+        height: 300px;
+        width: 400px;
+        background-color: aqua;
+        color: black;
+      }
+	</style>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> -->
+    <!-- Load jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Load jQuery UI -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+      <p> Facebook is 
+        <span id="great">great</span>
+      </p>  
+
+      <p class="orange">PARAGRAPH 2</p>
+      <p>Paragraph 3</p>
+    </div>
+    <div class="yellowbox" id="car">
+      <ul id="lists">
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Benz</li>
+      </ul>
+      
+
+      <p>Type your name: <input> <button type="submit">Submit</button></p>
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+
+    <p>A Paragraph</p>
+    <div class="greenbox" id="micro">
+      <p>
+        Microsoft.
+      </p>
+    </div>
+     <div id="droppable">
+        You can drop things here!!!!!
+    </div>
+    <script>
+        var message= ["Please","leave","me","alone"];
+
+        $(function(){
+            $("#facebook").draggable();
+            $("#car").draggable({
+                axis: "y"
+            });
+            $("#micro").draggable({
+                revert: true,
+                start: function(){
+                    $("#facebook").css("background-color","pink");
+                },
+                drag: function(){
+                    $("#micro").css("background-color","pink");
+                    $("#micro").find("p").html(message[Math.floor(4 * Math.random())]);
+                },
+                stop: function(){
+                    $("#facebook").css("background-color","orange");
+                    $("#micro").html('<p>FinallyY!!!</p>')
+                }
+
+            })
+            $("#droppable").droppable({
+                drop: function(event, ui){
+                    $(this).css("background-color","yellow");
+                    $(this).find("p").remove();
+                    $("<li></li>").text(ui.draggable.text()).appendTo(this);
+                },
+                accept: "#lists li"
+            });
+            $("#lists").find("li").draggable({
+                helper: "clone",
+                appendTo: "body"
+            });
+        });
+       
+
+    </script>
+  </body>
+</html>

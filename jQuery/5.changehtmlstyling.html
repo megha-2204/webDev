@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:300px;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+      .sanserif{
+        font-family: sans-serif;
+      }
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  </head>
+  
+  <body>
+    <button id="changeFb">Change Facebook</button>
+    <button id="changeApple">Change Apple</button>
+    <button id="changeMS">Change Microsoft</button>
+    <button id="showms">show Microsoft</button>
+    <button id="changeGreat">Change great</button>
+
+    <div class="bluebox" id="facebook">
+      <p> Facebook is 
+        <span id="great">great</span>
+      </p>  
+
+      <p class="orange">PARAGRAPH 2</p>
+      <p>Paragraph 3</p>
+    </div>
+    <div class="yellowbox sanserif" id="apple">
+      <!-- <ul>
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Benz</li>
+      </ul>
+      <table>
+        <tr><td>Phone Maker</td><td>Model</td><td>Storage</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+      </table> -->
+
+     
+      <p>
+        Apple.
+      </p>
+      <!-- <p><a href="http:www.amazon.com">This is a link</a></p>
+      <p><a href="http:www.microsoft.com">This is another link</a></p> -->
+    </div>
+
+    <p>A Paragraph</p>
+    <div class="greenbox" id="microsoft">
+      <p><a href="http://www.microsoft.com" id="msLink">Microsoft Link</a></p>
+      <p id="microsoftPara"> Microsoft. </p>
+    </div>
+  </body>
+  <script>
+    $(function(){
+        $("#changeFb").click(function(){
+            // $("#facebook").css("width",'300px');
+            $("#facebook").css("width", 100* Math.random()-50 + $("#facebook").width());
+
+        });
+        $("#facebook").addClass("greenbox");
+      //  window.alert($("#facebook").innerHeight())
+       // window.alert($("#facebook").outerHeight());
+
+       $("#changeApple").click(function(){
+            // $("#facebook").css("width",'300px');
+            $("#apple").removeClass("sanserif");
+            $("#apple").css("position","absolute");
+            $("#apple").css({'top': 200 * Math.random(), 'left': 256 * Math.random(), 'background-color': 'rgb(' + Math.floor(256* Math.random()) + ',' + Math.floor(256* Math.random()) + ',' +Math.floor(256* Math.random()) + ')'});
+
+        });
+       
+        $("#changeMS").click(function(){
+            $("#microsoft").toggleClass("greenbox");
+        });
+
+        $("#microsoft").dblclick(function(){
+            $(this).hide();
+        });
+        $("#showms").click(function(){
+            $("#microsoft").show();
+        });
+        $("#changeGreat").click(function(){
+            $("#great").wrap("<div></div>")
+        });
+    });
+  </script>
+</html>

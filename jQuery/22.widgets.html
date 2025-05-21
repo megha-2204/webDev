@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/blitzer/jquery-ui.css">
+
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 200px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 200px;
+		width: auto;
+        margin-bottom: 30px;
+	  }
+      .ui-menu{
+        width: 100px;
+      }
+	  #sliderVal, #mileageVal{
+        color: blue;
+        border: 0;
+        font-weight: bold;
+      }
+     
+	</style>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> -->
+    <!-- Load jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Load jQuery UI -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+        <p>
+            <label for="myInput">Enter a value: </label>
+            <input id="myInput" name="myInput" value="30" title="Please enter a value: ">
+        </p>
+
+    </div>
+
+
+    <div class="yellowbox" id="car">
+        <p> This is car!!</p>
+        <ul>
+            <li><a href="#tab1">Tab1</a></li>
+            <li><a href="#tab2">Tab2</a></li>
+            <li><a href="#tab3">Tab3</a></li>
+        </ul>
+        <div id="tab1"><p>content 1</p></div>
+        <div id="tab2"><p>content 2</p></div>
+        <div id="tab3"><p>content 3</p></div>
+    </div>
+
+   
+
+    <div class="greenbox" id="micro">
+        <p> This is microsoft!!</p>
+      
+      
+    </div>
+
+    <script>
+       $(function(){
+            $("#myInput").spinner({
+                min: 0,
+                max: 100,
+                step: 3
+            });
+            $("#car").tabs({
+                collapsible: true,
+                event: "mouseover"
+            });
+            $("#car").tabs().find(".ui-tabs-nav").sortable({
+                axis: "x"
+            });
+            // $(document).tooltip();
+            $("#myInput").tooltip({
+                show: {
+                    // effect: "slideDown"
+                    effect: "explode"
+                }
+            });
+
+       });
+    </script>
+  </body>
+</html>

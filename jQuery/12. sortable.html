@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+        padding: 10px;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+      #droppable{
+        height: 300px;
+        width: 400px;
+        background-color: aqua;
+        color: black;
+      }
+      li{
+        font-size: 2em;
+        margin-bottom: 5px;
+        text-align: center;
+        
+      }
+      #lists .ui-selecting{
+        background: #cefad1;
+        color: white;
+        border: 1px solid #eee;
+        min-height: 20px;
+      }
+      .connectedList{
+        border: 1px solid #eee;
+        min-height: 20px;
+
+      }
+	</style>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> -->
+    <!-- Load jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Load jQuery UI -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+      <p> Facebook is 
+        <span id="great">great</span>
+      </p>  
+
+      <p class="orange">PARAGRAPH 2</p>
+      <p>Paragraph 3</p>
+    </div>
+    <div class="yellowbox" id="car">
+      <ul id="lists">
+        <li class="ui-state-default">Audi</li>
+        <li class="ui-state-default">BMW</li>
+        <li class="ui-state-default notSortable">Benz</li>
+      </ul>
+      
+    </div>
+
+    <p>A Paragraph</p>
+    <div class="greenbox" id="micro">
+      <p>
+        Microsoft.
+      </p>
+      <ul id="list001" class="connectedList">
+        <li class="ui-state-default">Ferari</li>
+        <li class="ui-state-default">Mercedes</li>
+        <li class="ui-state-default notSortable">Alcazar</li>
+      </ul>
+    </div>
+     <div id="droppable">
+        You can drop things here!!!!!
+    </div>
+    <script>
+        $(function(){
+            $("#lists").sortable({
+                placeholder: "ui-state-error",
+                cancel: ".notSortable"
+            });
+            $("#list001").sortable();
+            $("#lists, #list001").sortable({
+                connectWith: ".connectedList"
+            });
+        });
+    </script>
+  </body>
+</html>

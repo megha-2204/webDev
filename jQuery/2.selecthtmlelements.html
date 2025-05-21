@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox">
+      <p> Facebook is 
+        <span id="great">great</span>
+      </p>  
+
+      <p class="orange">PARAGRAPH 2</p>
+      <p>Paragraph 3</p>
+    </div>
+    <div class="yellowbox">
+      <ul>
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Benz</li>
+      </ul>
+      <table>
+        <tr><td>Phone Maker</td><td>Model</td><td>Storage</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+      </table>
+
+      <p>Type your name: <input> <button type="submit">Submit</button></p>
+      <p>
+        Apple.
+      </p>
+      <p><a href="http:www.amazon.com">This is a link</a></p>
+      <p><a href="http:www.microsoft.com">This is another link</a></p>
+    </div>
+
+    <p>A Paragraph</p>
+    <div class="greenbox">
+      <p>
+        Microsoft.
+      </p>
+      
+    </div>
+    <script>
+        $(function(){
+          //$("*") - select all the elements
+          $("*").css("font-size", '50px');
+          
+        //   $("p").css("text-align","center");
+        
+        //direct child of the divs
+          // $("div > p").css("text-align","center");
+
+          // //paragraph tag after the div, div~p 
+          // $("div ~ p").css("text-align","center");
+          //decendents of div
+          $("div  p").css("text-align","center");
+
+          $("#great").css("background-color","pink");
+
+          $(".orange").css("background-color","orange");
+
+          $("div.bluebox").css("font-family","sans-serif");
+
+          // $("p:first-child").css("text-decoration","underline");
+
+          // $("p:last-child").css("text-decoration","underline");
+
+          $("p:first-child, p:last-child").css("text-decoration","underline");
+
+          $("[href]").css("color","red");
+
+          $("li:first-child, li:last-child").css("background-color","blue");
+
+          $("tr:even").css("background-color","pink");
+          $("tr:odd").css("background-color","purple");
+
+          $(":input").css("background-color","red");
+          $(":Submit").css("background-color","green");
+
+          $("div:has(table)").css("background-color","blue")
+
+        });
+      </script>
+  </body>
+  
+  
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: 300px;
+		    width: 500px;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+      #droppable{
+        height: 300px;
+        width: 400px;
+        background-color: aqua;
+        color: black;
+      }
+	</style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script> 
+  </script>
+  </head>
+  
+  <body>
+    <div id="resizer" class="ui-widget-content">
+    <div class="bluebox" id="facebook">
+        <h3>Section 1</h3>
+        <div><p>Content 1</p><p>Content 1</p><p>Content 1</p><p>Content 1</p><p>Content 1</p><p>Content 1</p><p>Content 1</p></div>
+        
+        <h3>Section 2</h3>
+        <div><p>Content 2</p></div>
+        <h3>Section 3</h3>
+        <div><p>Content 3</p></div>
+    </div>
+</div>
+    <div class="yellowbox" id="car">
+      <ul id="lists">
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Benz</li>
+      </ul>
+      <p>Type your name: <input> <button type="submit">Submit</button></p>
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+
+    <p>A Paragraph</p>
+    <div class="greenbox" id="micro">
+      <p>
+        Microsoft.
+      </p>
+    </div>
+     <div id="droppable">
+        You can drop things here!!!!!
+    </div>
+    <script>
+        $(function(){
+            $("#facebook").accordion({
+                collapsible: true,
+                icons:{
+                    header: "ui-icon-circle-arrow-e",
+                    activeHeader: "ui-icon-circle-arrow-s"
+                },
+                heightStyle: "fill"
+            });
+       
+       
+        $("#resizer").resizable({
+            resize: function(){
+                $("#facebook").accordion("refresh");
+            }
+        });
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<html><head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/blitzer/jquery-ui.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css -->
+    ">
+    <!-- Load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Load jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Optionally, add the jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+    
+        <title>
+      Ajax
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+    color: white;
+    height: 100px;
+    width:auto;
+    }
+    .yellowbox{
+    background-color: rgb(222, 224, 85);
+    height: 100px;
+    width: auto;
+    }
+    .greenbox{
+    background-color: #31af37;
+    height: 100px;
+    width: auto;
+    }
+    #great{
+    background-color: #5a3479;
+    
+    }
+  </style>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">  </script>-->
+    
+ 
+  </head>
+  
+  <body>
+    <button>
+      Button
+    </button>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great" id="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+    <div class="greenbox" id="microsoft">
+      <p>
+        Microsoft.
+      </p>
+      
+      <p>
+        <a id="microsoftLink" href="http://www.microsoft.com" title="Microsoft">
+          Microsoft link.
+        </a>
+      </p>
+      
+    </div>
+    <div class="ui-state-error" style="height:100px;margin-top: 20px;">
+        <p>Error message</p>
+    </div>
+    <p>
+      Enter your name:
+      <input>
+    </p>
+    <script>
+        $(function(){
+            $("#facebook").draggable();
+        });
+    </script>
+        
+  
+  </body></html>

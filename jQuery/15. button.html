@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/blitzer/jquery-ui.css">
+
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 300px;
+		width: 300px;
+	  }
+	  
+	</style>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> -->
+    <!-- Load jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Load jQuery UI -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+      <p> Facebook is great
+      </p>
+      <div id="checkboxes">
+        <input type="checkbox" id="check01">
+      <label for="check01">Audi</label> 
+      <input type="checkbox" id="check02">
+      <label for="check02">BMW</label> 
+      <input type="checkbox" id="check03">
+      <label for="check03">Benz</label> 
+      </div>
+    </div>
+
+
+    <div class="yellowbox" id="car">
+        <input type="checkbox" id="mycheck">
+        <label for="mycheck">Checkbox</label> 
+      <ul id="lists">
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Benz</li>
+      </ul>
+    </div>
+
+   
+
+    <div class="greenbox" id="micro">
+        <div id="radioboxes">
+            <input type="radio" id="radiobox1" name="radioBoxes">
+            <label for="radiobox1">Ford</label>
+
+            <input type="radio" id="radiobox2" name="radioBoxes">
+            <label for="radiobox2">Toyoto</label>
+
+            <input type="radio" id="radiobox3" name="radioBoxes">
+            <label for="radiobox3">Ferari</label>
+        </div>
+      <p>
+        Microsoft.
+      </p>
+      
+    </div>
+    <div>
+        <button id="button1">Button1</button>
+        <button id="button2">Button2</button>
+        <button id="button3">Button3</button>
+    </div>
+    <script>
+        $(function(){
+            $("#button1").button();
+            $("#button2").button({
+                icons: {
+                    primary: "ui-icon-folder-open"
+                },
+                text: false
+            });
+            $("#button3").button({
+                icons: {
+                    primary: "ui-icon-mail-closed",
+                    secondary: "ui-icon-carat-1-e"
+                }
+            });
+            $("#mycheck").button();
+
+            $("#checkboxes").buttonset();
+
+            $("#radioboxes").buttonset();
+        })
+    </script>
+  </body>
+</html>

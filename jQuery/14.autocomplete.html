@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: 300px;
+		    width:300px;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .ui-autocomplete{
+        max-height: 100px;
+        overflow-y: hidden;
+        max-width: 200px;
+        overflow-x: hidden;
+      }
+      #city{
+        width: 200px;
+      }
+      
+	</style>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> -->
+    <!-- Load jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Load jQuery UI -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+      <p> Facebook is 
+        <span id="great">great</span>
+      </p>  
+      <p>Input your city: <input id="city"></p>
+
+    </div>
+    <div class="yellowbox" id="car">
+      <ul id="lists">
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Benz</li>
+      </ul>
+    </div>
+
+    <script>
+        $(function(){
+            $("#city").autocomplete({
+                source: ["London", "UnitedKingdom", "States", "Canada", "Paris", "Mandrid"]
+            });
+        });
+    </script>
+
+  </body>
+</html>

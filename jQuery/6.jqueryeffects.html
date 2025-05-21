@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+      .sanserif{
+        font-family: sans-serif;
+      }
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  </head>
+  
+  <body>
+    
+    <button id="fadeout">Fade out</button>
+    <button id="fadein">Fade In</button>
+    <button id="fadeToggle">Fade Toggle</button>
+    <button id="animate">Animate</button>
+
+
+
+    <div class="bluebox" id="facebook">
+      <p> Facebook is 
+        <span id="great">great</span>
+      </p>  
+
+      <p class="orange">PARAGRAPH 2</p>
+      <p>Paragraph 3</p>
+    </div>
+    <div class="yellowbox sanserif" id="apple">
+      <p>
+        Apple.
+      </p>
+    </div>
+    <div class="greenbox" id="microsoft">
+      <p> Microsoft. </p>
+    </div>
+    <p>Type your name:</p><input id="input">
+  </body>
+  <script>
+    $("#fadeout").click(function(){
+        $("#facebook").fadeOut(3000, function(){
+            window.alert("Hi!!!!");
+        });
+    });
+
+    $("#fadein").click(function(){
+        $("#facebook").fadeIn();
+    });
+
+    $("#fadeToggle").click(function(){
+        $("#facebook").fadeToggle(1000);
+        $("#apple").fadeToggle(1000);
+        $("#microsoft").fadeToggle(1000);
+    });
+    // $("#animate").click(function(){
+    //     $("#facebook").animate({width:'200px',height:'50px',opacity:'0.5'},1000);
+    // });
+
+    $("#animate").click(function(){
+        $("#facebook").animate({width:'200px'},"slow");
+        $("#facebook").animate({height:'300px'},"slow");
+        $("#facebook").animate({height:'100px'},"slow");
+        $("#facebook").delay(3000).animate({width:'300px'},"slow");
+    });
+  </script>
+</html>

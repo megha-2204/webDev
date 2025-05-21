@@ -1,0 +1,11 @@
+AJAX = Asynchronous Javascript and xml
+Transfer info from webpage and the server.
+changes path of the webpage without having to reload the page everytime.
+
+
+
+
+https://jqueryui.com/  : JQUERY UI
+
+
+https://developers.google.com/speed/libraries#jquery-ui : paste it in Head section 

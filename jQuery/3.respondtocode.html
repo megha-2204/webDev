@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox">
+      <p> Facebook is 
+        <span id="great">great</span>
+      </p>  
+
+      <p class="orange">PARAGRAPH 2</p>
+      <p>Paragraph 3</p>
+    </div>
+    <div class="yellowbox">
+      <ul>
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Benz</li>
+      </ul>
+      <table>
+        <tr><td>Phone Maker</td><td>Model</td><td>Storage</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+      </table>
+
+     
+      <p>
+        Apple.
+      </p>
+      <p><a href="http:www.amazon.com">This is a link</a></p>
+      <p><a href="http:www.microsoft.com">This is another link</a></p>
+    </div>
+
+    <p>A Paragraph</p>
+    <div class="greenbox">
+      <p>
+        Microsoft.
+      </p>
+      
+    </div>
+    <p>Type your name:</p><input id="input"> <button type="submit" id="submit">Submit</button>
+    <script>
+        $(function(){
+            $("p").click(function(){
+                //all the paragraphs on click
+                // $("p").css("background-color","purple");
+
+                //only the para that is being clicked
+                // $(this).css("background-color","purple");
+
+                $("p").mouseover(function(){
+                    $(this).css("background-color","purple");
+                });
+
+                $("p").mouseout(function(){
+                    $(this).css("background-color","");
+                });
+
+                $("input").focus(function(){
+                    $(this).css("background-color","lightblue");
+                });
+                $("input").blur(function(){
+                    $(this).css("background-color","yellow");
+                });
+                $("input").keyup(function(){
+                    $(this).css("background-color","pink");
+                });
+
+                $("#submit").click(function(){
+                    $("#input").css("background-color","white");
+                    $("#input").val(" ")
+                });
+
+
+            });
+        });
+      </script>
+  </body>
+  
+  
+</html>

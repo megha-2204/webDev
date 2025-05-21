@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/blitzer/jquery-ui.css">
+
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: 200px;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 200px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 200px;
+		width: auto;
+	  }
+	  
+	</style>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> -->
+    <!-- Load jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Load jQuery UI -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+        <p>Microsoft!</p>
+        
+        
+    </div>
+    <div id="myDiv" title="This is a dilog">
+        <p>Welcome to our page.</p>
+    </div>
+
+    <div id="confirmation" title="Leave the page">
+        <p><span class="ui-icon ui-icon-alert"></span>You will lose all the unsaved work, Are you sure??</p>
+    </div>
+
+    <div class="yellowbox" id="car">
+        
+    </div>
+
+   
+
+    <div class="greenbox" id="micro">
+       
+      
+      
+    </div>
+    
+    <button id="open">Open dilog!</button>
+    <button id="previous">Go to previous page</button>
+
+    <script>
+        $(function(){
+            $("#myDiv").dialog({
+                autoOpen: false
+            });
+            $("#open").click(function(){
+                $("#myDiv").dialog("open");
+            });
+            $("button").button();
+            $("#confirmation").dialog({
+                autoOpen:false,
+                modal: true,
+                buttons: {
+                    "Go to previous page" : function(){
+                        window.history.back();
+                    },
+                    "Cancel" : function(){
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            $("#previous").click(function(){
+                $("#confirmation").dialog("open");
+            });
+        })
+    </script>
+  </body>
+</html>

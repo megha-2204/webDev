@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+      #droppable{
+        height: 300px;
+        width: 400px;
+        background-color: aqua;
+        color: black;
+      }
+      #container{
+        height: 500px;
+        width: 300px;
+        border-style: dotted;
+      }
+	</style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+      <p> Facebook is 
+        <span id="great">great</span>
+      </p>  
+
+      <p class="orange">PARAGRAPH 2</p>
+      <p>Paragraph 3</p>
+    </div>
+    <div id="container">
+        <div class="yellowbox" id="car">
+            <ul id="lists">
+              <li>Audi</li>
+              <li>BMW</li>
+              <li>Benz</li>
+            </ul>
+            
+      
+            <p>Type your name: <input> <button type="submit">Submit</button></p>
+            <p>
+              Apple.
+            </p>
+            
+          </div>
+    </div>
+
+    <p>A Paragraph</p>
+    <div class="greenbox" id="micro">
+      <p>
+        Microsoft.
+      </p>
+    </div>
+     <div id="droppable">
+        You can drop things here!!!!!
+    </div>
+    <script>
+        $(function(){
+            $("#facebook").resizable({
+                maxHeight: 200,
+                minHeight: 50,
+                minWidth: 100,
+                maxWidth: 300,
+                aspectRatio: 4/3,
+                ghost: true,
+                alsoResize: "#micro"
+            });
+            $("#car").resizable({
+                containment: "#container",
+                animate: true
+            });
+        });
+
+    </script>
+  </body>
+</html>

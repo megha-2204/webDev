@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/blitzer/jquery-ui.css">
+
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 200px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 200px;
+		width: auto;
+	  }
+      .ui-menu{
+        width: 100px;
+      }
+	  
+	</style>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> -->
+    <!-- Load jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Load jQuery UI -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+        <ul id="continents">
+            <li>Africa</li>
+            <li>Asia</li>
+            <li>America</li>
+            <li>Australia</li>
+            <li>
+                Europe
+                <ul>
+                    <li>France</li>
+                    <li>UK
+                        <ul>
+                            <li>England</li>
+                            <li>Scotland</li>
+                            <li>Northern island</li>
+                        </ul>
+                    </li>
+                    <li>Spain</li>
+                </ul>
+            </li>
+        </ul>
+        
+    </div>
+
+
+    <div class="yellowbox" id="car">
+        
+    </div>
+
+   
+
+    <div class="greenbox" id="micro">
+       
+      
+      
+    </div>
+    
+    <script>
+        $(function(){
+            $("#continents").menu();
+        })
+    </script>
+  </body>
+</html>

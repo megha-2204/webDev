@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		    color: white;
+		    height: auto;
+		    width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+      <p> Facebook is 
+        <span id="great">great</span>
+      </p>  
+
+      <p class="orange">PARAGRAPH 2</p>
+      <p>Paragraph 3</p>
+    </div>
+    <div class="yellowbox" id="apple">
+      <ul>
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Benz</li>
+      </ul>
+      <table>
+        <tr><td>Phone Maker</td><td>Model</td><td>Storage</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+        <tr><td>Apple</td><td>Iphone14</td><td>316GB</td></tr>
+      </table>
+
+     
+      <p>
+        Apple.
+      </p>
+      <p><a href="http:www.amazon.com">This is a link</a></p>
+      <p><a href="http:www.microsoft.com">This is another link</a></p>
+    </div>
+
+    <p>A Paragraph</p>
+    <div class="greenbox" id="microsoft">
+      <p><a href="http://www.microsoft.com" id="msLink">Microsoft Link</a></p>
+      <p id="microsoftPara"> Microsoft. </p>
+    </div>
+    <p>Enter your input: <input></p>
+    <button id="fb">Change facebook page. </button>    
+    <button id="Capple">Change
+        apple page. </button>    
+    <button id="Cinput"> Change input value . </button>    
+    <button id="Cms"> Change microsoft value . </button>   
+    <button id="addText">Add text . </button>    
+ 
+
+  </body>
+  <script>
+    $(function(){
+        $("#fb").click(function(){
+            $("#facebook").text("This is facebook");
+        });
+        $("#Capple").click(function(){
+            $("#apple").html("<p>This is Apple</p><p>New IOS Available</p>");
+        });
+        $("#Cinput").click(function(){
+            $("input").val("Sam");
+        });
+        $("#Cms").click(function(){
+            $("#msLink").attr({"href" : "http://www.google.com", "title" : "Google"});
+        });
+
+        //last of the div
+        // $("#addText").click(function(){
+        //   $("#microsoft").append("<ul><li>BMW</li><li>Benz</li><li>Audi</li><ul>")
+        // });
+
+        //first of the div
+        // $("#addText").click(function(){
+        //   $("#microsoft").prepend("<ul><li>BMW</li><li>Benz</li><li>Audi</li><ul>")
+        // });
+        $("#addText").click(function(){
+        $("#microsoftPara").after("<p>New Para</p>");
+
+        });
+
+        $("#addText").click(function(){
+        $("#microsoftPara").before("<p>Before New Para</p>");
+
+        });
+    });
+  </script>
+  
+</html>
