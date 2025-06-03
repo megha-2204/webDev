@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buttons in html</title>
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+
+    </style>
+    
+  </head>
+  <body>
+     <div class="container-fluid">
+        <a class="btn btn-link" href="#">Top of the page</a>
+        <button class="btn btn-default">Reset1</button>
+        <button class="btn btn-primary">Reset2</button>
+        <input class="btn btn-info btn-sm active" type="button" value="Cancel">
+        <input class="btn btn-success btn-xs active" type="button" value="Submit">
+        <input class="btn btn-success btn-xs active disabled" type="button" value="SuccessDisbaled">
+
+        <br />
+        <hr>
+
+        <div class="btn-group btn-group-lg" role="group">
+            <button type="button" class="btn btn-default">Left</button>
+            <button type="button" class="btn btn-default">Middle</button>
+            <button type="button" class="btn btn-default">Right</button>
+        </div>
+        <br />
+        <hr>
+
+        <div class="btn-toolbar" role="toolbar">
+            <!-- <div class="btn-group btn-group-justified" role="group"> -->
+            <div class="btn-group btn-group-vertical" role="group"></div>
+                <div class="btn-group"><button type="button" class="btn btn-default">Left</button></div>
+                <div class="btn-group"><button type="button" class="btn btn-default">Middle</button></div>
+                <div class="btn-group"><button type="button" class="btn btn-default">Right</button></div>
+            </div>
+            <br /><br>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+        </div>
+
+     </div>
+    
+    <!-- jQuery (required for Bootstrap 3) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- Bootstrap JS from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
