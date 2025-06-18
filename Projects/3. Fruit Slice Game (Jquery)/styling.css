@@ -1,0 +1,111 @@
+html{
+    height: 100%;
+    background:radial-gradient(circle, #fff, #ccc);
+}
+#container{
+    background-color: #9DD2EA;;
+    height: 600px;
+    width: 750px;
+    margin: 10px auto;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 0px  #009de4;
+}
+
+#score{
+    background-color: #F1FF92;
+    color: #888E5F;
+    padding: 11px;
+    position: absolute;
+    left: 700px;
+    box-shadow: 0px 4px 0px 0px #9da853;;
+}
+#trialsLeft{
+    width: 80px;
+    padding: 10px;
+    background-color: #F1FF92;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+#correct{
+    position: absolute;
+    background-color: #42e252;
+    color: white;
+    padding: 11px;
+    left: 300px;
+    display: none;
+}
+#tryagain{
+    position: absolute;
+    background-color: #de401a;
+    color: white;
+    padding: 11px;
+    left: 260px;
+    display: none;
+}
+#fruitsContainer{
+    width: 650px;
+    height: 400px;
+    background-color: white;
+    margin: 50px auto 10px auto;
+    box-shadow: 0px 4px #535aa8;
+    position: relative;
+    overflow: hidden;
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    color: black;
+}
+#instruction{
+    width: 450px;
+    height: 50px;
+    background-color: #B481D9;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0px 4px 0px 0px #8153a8;
+}
+#startreset{
+    width: 80px;
+    background-color: rgba(255,255,255,0.5);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s;
+}
+#startreset.active{
+    background-color: #9C89F6;
+    color: white;
+    box-shadow: 0px 0px #6b54d3; 
+    top: 4px;
+}
+#gameover{
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(#F3CA6B, #F3706C);
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 170px;
+    left: 145px;
+    z-index: 2;
+    display: none;
+}
+.life{
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+.fruit{
+    display: none;
+    position: absolute;
+}
